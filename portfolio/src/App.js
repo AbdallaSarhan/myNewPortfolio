@@ -2,9 +2,10 @@ import React from "react";
 import "./index.css";
 import Home from "./routes/Home";
 import About from "./routes/About";
-import Contact from "./routes/Contact";
+// import Contact from "./routes/Contact";
 import Projects from "./routes/Projects";
 import { Routes, Route } from "react-router-dom";
+import { ProjectDetails } from "./routes/ProjectDetails";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/project/:title" element={<ProjectDetails />} />
       </Routes>
     </>
   );

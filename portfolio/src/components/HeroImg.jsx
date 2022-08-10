@@ -2,7 +2,7 @@ import "./HeroImgStyles.css";
 import React from "react";
 import hammerImg from "../assets/pexels-antoni-shkraba-5475809.jpg";
 import { Link } from "react-router-dom";
-
+import logo from "../assets/Ball6.png";
 const HeroImg = () => {
   return (
     <div className="hero">
@@ -10,14 +10,14 @@ const HeroImg = () => {
         <img className="intro-img" src={hammerImg} alt="work" />
       </div>
       <div className="content">
-        <p>HI, I'M A COMPUTER ENGINEERING STUDENT</p>
-        <h1>Learning Frontend and Backend Since 2021</h1>
+        <p>Abdalla Sarhan</p>
+        <h1>Computer Engineering Student</h1>
         <div>
           <Link to="/projects" className="btn">
             Projects
           </Link>
-          <Link to="/contact" className="btn-light">
-            Contact
+          <Link to="/about" className="btn-light">
+            About
           </Link>
         </div>
       </div>

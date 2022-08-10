@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./NavbarStyles.css";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../assets/Ball6.png";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
   return (
     <div className={color ? "header header-bg" : "header"}>
       <Link to="/">
-        <h1>Portfolio</h1>
+        <img src={logo} alt="img" className="logo" />
       </Link>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
@@ -35,9 +36,9 @@ const Navbar = () => {
         <li>
           <Link to="/about">About</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/contact">Contact</Link>
-        </li>
+        </li> */}
       </ul>
       <div className="hamburger" onClick={handleClick}>
         {click ? (
