@@ -8,6 +8,9 @@
   height: 90px;
   z-index: 10;
 }
+.logo {
+  width: 100px;
+}
 .header-bg {
   background-color: rgba(0, 0, 0, 0.85);
   transition: 0.5s;
@@ -24,6 +27,9 @@
 .nav-menu li a {
   font-size: 1.2rem;
   font-weight: 500;
+}
+.nav-menu li a:hover {
+  color: #bd6666;
 }
 .hamburger {
   display: none;

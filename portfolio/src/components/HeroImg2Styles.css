@@ -6,8 +6,8 @@
 }
 .hero-img::before {
   content: "";
-  background-image: url("../assets/pexels-cottonbro-3584998.jpg");
-  background-size: contain;
+  background-image: url("../assets/pexels-nadezhda-moryak-6063606.jpg");
+  background-size: cover;
   background-position: center top;
   height: 100%;
   width: 100%;
