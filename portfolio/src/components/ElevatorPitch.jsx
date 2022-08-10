@@ -36,9 +36,3 @@ const ElevatorPitch = () => {
 };
 
 export default ElevatorPitch;
-
-// I consider myself hard-working,
-// enthusiastic, and a team player. I moved to Toronto shortly after
-// graduating high school in Alberta. I am building websites using React
-// as well as learning about different backend frameworks. I am always
-// eager to learn more and enhance my skills.
