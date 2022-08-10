@@ -12,6 +12,7 @@ const Project = () => {
           return (
             <ProjectCard
               key={index}
+              id={value.id}
               img={value.img}
               title={value.title}
               text={value.text}
