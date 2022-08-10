@@ -1,13 +1,13 @@
 import React from "react";
 import {
-  FaFacebook,
+  FaGithub,
   FaHome,
   FaLinkedin,
   FaMailBulk,
   FaPhone,
   FaTwitter,
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+
 import "./FooterStyles.css";
 
 const Footer = () => {
@@ -18,8 +18,7 @@ const Footer = () => {
           <div className="location">
             <FaHome size={20} color="white" style={{ marginRight: "2rem" }} />
             <div>
-              <p>123 Housing Society</p>
-              <p>Canada</p>
+              <p>Toronto</p>
             </div>
           </div>
           <div className="phone">
@@ -29,7 +28,7 @@ const Footer = () => {
                 color="white"
                 style={{ marginRight: "2rem" }}
               />
-              1-1212-121-21
+              587-937-7321
             </h4>
           </div>
           <div className="email">
@@ -39,30 +38,51 @@ const Footer = () => {
                 color="white"
                 style={{ marginRight: "2rem" }}
               />
-              admin@gmail.com
+              abdallasarhan128@gmail.com
             </h4>
           </div>
         </div>
         <div className="right">
           <h4>About Me</h4>
-          <p>I am......... cooollll guy</p>
+          <p>
+            I am a Computer Engineering student at York University - Lassonde
+            School of Engineering. I am continuously learning Frontend and
+            Backend web development.
+          </p>
           <div className="social">
-            <FaFacebook
-              size={30}
-              color="white"
-              style={{ marginRight: "1rem" }}
-            />
-            <FaTwitter
-              size={30}
-              color="white"
-              style={{ marginRight: "1rem" }}
-            />
-            <NavLink to="https://www.linkedin.com/in/abdalla-sarhan-a80330204/"></NavLink>
-            <FaLinkedin
-              size={30}
-              color="white"
-              style={{ marginRight: "1rem" }}
-            />
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/AbdallaSarhan"
+            >
+              <FaGithub
+                size={30}
+                color="white"
+                style={{ marginRight: "1rem" }}
+              />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.twitter.com/abdallaaax"
+            >
+              <FaTwitter
+                size={30}
+                color="white"
+                style={{ marginRight: "1rem" }}
+              />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/abdalla-sarhan-a80330204/"
+            >
+              <FaLinkedin
+                size={30}
+                color="white"
+                style={{ marginRight: "1rem" }}
+              />
+            </a>
           </div>
         </div>
       </div>
