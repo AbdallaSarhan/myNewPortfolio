@@ -33,10 +33,7 @@ export const ProjectDetails = () => {
         <Navbar />
         <HeroImg2 heading={`Project Details: ${title}`} />
         <div className="info">
-          <h4>
-            Yes, this is the home screen. The design could definitely use some
-            work
-          </h4>
+          <h4>This is the amazing looking home screen.</h4>
           <img src={WelcomeScreen} alt="" className="projectImg" />
           <h4>
             The Login Requires a Registration with a valid email format
@@ -59,7 +56,7 @@ export const ProjectDetails = () => {
           <h4>
             You can come and see who has posted their trip details. Note that
             the "Allowing" section of the posts was a an idea that I've decided
-            to migrate to a different project that currently working on
+            to migrate to a different project that I'm currently working on
           </h4>
           <img src={PostsScreen} alt="" className="projectImg" />
         </div>

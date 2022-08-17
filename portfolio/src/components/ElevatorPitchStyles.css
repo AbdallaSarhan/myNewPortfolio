@@ -38,3 +38,13 @@
 .resume:active {
   background-color: #a9a9a9;
 }
+@media screen and (max-width: 640px) {
+  .desc {
+    margin: -1.5rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border: 2px dotted #bd6666;
+    border-radius: 60px;
+    box-shadow: 10px 10px 30px #bd6666;
+  }
+}

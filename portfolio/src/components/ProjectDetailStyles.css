@@ -1,5 +1,5 @@
 .projectImg {
-  width: 60%;
+  width: 80%;
 }
 .info {
   align-items: center;
@@ -16,10 +16,19 @@ h4 {
   color: white;
   font-size: auto;
 }
+@media screen and (max-width: 640px) {
+  .projectImg {
+    width: 100%;
+  }
+  .info {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    /* margin-top: 100px;
+    margin-bottom: 100px; */
 
-@media screen and (max-width: 1000px) {
-  .container {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding: 50px;
   }
 }
