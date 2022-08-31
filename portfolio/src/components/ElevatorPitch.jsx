@@ -1,7 +1,7 @@
 import React from "react";
-import "./ElevatorPitchStyles.css";
-import me from "../assets/FinalMe.png";
+import me from "../assets/ME.jpeg";
 import resume from "../assets/Abdalla_Sarhan_Resume.pdf";
+import "./ElevatorPitchStyles.css";
 const ElevatorPitch = () => {
   return (
     <div className="container">
