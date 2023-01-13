@@ -1,6 +1,6 @@
 import React from "react";
 import me from "../assets/ME.jpeg";
-import resume from "../assets/Abdalla_Sarhan_Resume.pdf";
+import resume from "../assets/Abdalla_Sarhan_Resume_Latest.pdf";
 import "./ElevatorPitchStyles.css";
 const ElevatorPitch = () => {
   return (
@@ -17,7 +17,8 @@ const ElevatorPitch = () => {
           Hey there, My name is Abdalla Sarhan and I'm going into my third year
           of Computer Engineering at York University. I am an aspring Full Stack
           Developer and I've been learning and experimenting with web
-          development for about a year.
+          development for over a year and have recently gotten into mobile
+          development with React Native.
         </h4>
         <h4>
           Initially, I didn't have a vision for what I wanted to do after high

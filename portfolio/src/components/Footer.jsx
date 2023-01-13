@@ -47,7 +47,7 @@ const Footer = () => {
           <p>
             I am a Computer Engineering student at York University - Lassonde
             School of Engineering. I am continuously learning Frontend and
-            Backend web development.
+            Backend web and mobile development.
           </p>
           <div className="social">
             <a
