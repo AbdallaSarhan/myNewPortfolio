@@ -21,6 +21,7 @@
 .location {
   display: flex;
   margin-bottom: 0.8rem;
+  font-weight: 600;
 }
 .location p {
   line-height: 25px;
@@ -47,4 +48,10 @@ p {
   .footer-container {
     grid-template-columns: 1fr;
   }
+}
+.icon {
+  transition: transform 0.2s;
+}
+.icon:hover {
+  transform: scale(1.5);
 }
