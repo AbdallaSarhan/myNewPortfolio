@@ -38,7 +38,7 @@ const ElevatorPitch = () => {
   const listProps = useSpring({
     opacity: show ? 1 : 0,
 
-    padding: "2rem",
+    padding: "1.5rem",
     border: "2px dotted #bd6666",
     borderRadius: "60px",
     boxShadow: "10px 10px 30px #bd6666",
