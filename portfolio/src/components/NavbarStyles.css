@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 1rem;
   position: fixed;
@@ -20,13 +20,17 @@
 }
 
 .nav-menu li {
-  padding: 0 1rem;
   /* top and bottom - left and right */
+  padding: 0 1rem;
+  transition: transform 0.2s;
 }
-
+.nav-menu li:hover {
+  transform: scale(1.4);
+}
 .nav-menu li a {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
+  color: white;
 }
 .nav-menu li a:hover {
   color: #bd6666;
