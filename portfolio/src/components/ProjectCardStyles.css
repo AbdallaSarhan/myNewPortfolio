@@ -1,22 +1,24 @@
 .project-heading {
   text-align: center;
-  padding: 4rem 0 2rem 0;
 }
 .project-container {
-  max-width: 1140px;
+  padding: 4rem 0 2rem 0;
+  max-width: 1250px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
   grid-gap: 40px;
   padding-bottom: 5rem;
 }
 .project-card {
   background: #1a1919;
   padding: 1.2rem 1rem;
+  height: fit-content;
 }
 .project-card img {
   width: 100%;
-  height: auto;
+  object-fit: contain;
+  max-height: 300px;
 }
 .project-title {
   color: white;
