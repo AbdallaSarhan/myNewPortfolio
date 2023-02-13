@@ -1,37 +1,62 @@
-import React from "react";
-import me from "../assets/ME.jpeg";
-import resume from "../assets/Abdalla_Sarhan_Resume_Latest.pdf";
+import React, { useState, useEffect } from "react";
+import { animated as a, useSpring } from "@react-spring/web";
+import { useInView } from "react-intersection-observer";
 import "./ElevatorPitchStyles.css";
 const ElevatorPitch = () => {
+  const [show, setShowing] = useState(false);
+
+  const { ref, inView } = useInView({});
+
+  const headerProps = useSpring({
+    opacity: show ? 1 : 0,
+    // marginRight: show ? 0 : -710,
+    marginRight: show ? 60 : -710,
+    fontSize: show ? 65 : 25,
+  });
+  const contentProps = useSpring({
+    opacity: show ? 1 : 0,
+    marginRight: show ? 0 : -710,
+    color: show ? "white" : "black",
+    fontSize: 18,
+    fontWeight: 600,
+    paddingBottom: 20,
+    // marginLeft: show ? -150 : -710,
+  });
+  useEffect(() => {
+    setShowing(inView);
+  }, [inView]);
   return (
     <div className="container">
-      <div className="img-container">
-        <img src={me} alt="Picture of me" className="img" />
-      </div>
-      <a href={resume} className="resume" download>
-        Download Resume
-      </a>
+      <a.div className="summary-container" style={contentProps}>
+        <a.div className="summary ">
+          <a.li ref={ref} style={contentProps}>
+            Third year student studying a BEng specialized in Computer
+            Engineering at York University.
+          </a.li>
+          <a.li ref={ref} style={contentProps}>
+            My interests have led me in the direction of full stack development
+            and I've been learning and experimenting with web and mobile
+            development ever since.
+          </a.li>
+          <a.li ref={ref} style={contentProps}>
+            Naturally, I am a very curious person and love continuously learning
+            and filling the gaps in my understanding.
+          </a.li>
+          <a.li ref={ref} style={contentProps}>
+            I'm open to being involved in many different roles to try new things
+            and aquire new knowledge.
+          </a.li>
 
-      <div className="desc">
-        <h4>
-          Hey there, My name is Abdalla Sarhan and I'm going into my third year
-          of Computer Engineering at York University. I am an aspring Full Stack
-          Developer and I've been learning and experimenting with web
-          development for over a year and have recently gotten into mobile
-          development with React Native.
-        </h4>
-        <h4>
-          Initially, I didn't have a vision for what I wanted to do after high
-          school. I decided to give Engineering a shot since I was good at Math
-          and Science. After completing my second year, I got a taste of the
-          content I’ll be learning that is more related to the career I am
-          trying to pursue and surprisingly I’ve grown a passion and enjoyment
-          for coding and the field of Computer Engineering. I’m looking forward
-          to the content I’ll be learning in my degree next, and I think my eye
-          for details and determination to reach my goals will fuel my success
-          in my career.
-        </h4>
-      </div>
+          <a.li style={contentProps}>
+            I believe my eye for detail and determination for solving complex
+            problems will help me achieve my targets and be a valuable asset to
+            any team.
+          </a.li>
+        </a.div>
+      </a.div>
+      <a.h1 className="title" style={headerProps}>
+        Summary
+      </a.h1>
     </div>
   );
 };

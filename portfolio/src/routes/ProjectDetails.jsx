@@ -64,5 +64,15 @@ export const ProjectDetails = () => {
         <Footer />
       </>
     );
+  } else if (title === "CampUnity") {
+    return (
+      <>
+        <>
+          <Navbar />
+          <HeroImg2 heading="No More Details for" text={title} />
+          <Footer />
+        </>
+      </>
+    );
   }
 };

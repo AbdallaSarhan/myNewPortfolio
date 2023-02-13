@@ -3,12 +3,21 @@ import { Link } from "react-router-dom";
 import "./ProjectCardStyles.css";
 
 const ProjectCard = (props) => {
+  const projectBullets = props.text.split("-");
   return (
     <div className="project-card">
-      <img src={props.img} alt="project image" />
+      <img className="proj-img" src={props.img} alt="project image" />
       <h2 className="project-title">{props.title}</h2>
       <div className="project-details">
-        <p>{props.text}</p>
+        {projectBullets.map((value, index) => {
+          if (value === "") {
+            projectBullets[index] = null;
+          } else {
+            return (
+              <li style={{ color: "white", paddingBottom: 15 }}>{value}</li>
+            );
+          }
+        })}
         <div className="project-btns">
           {props.view === "" ? (
             <Link to={`/project/${props.title}`} className="btn">
