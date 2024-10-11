@@ -1,42 +1,44 @@
 .hero-img {
-  width: 100%;
-  background-color: rbga(0, 0, 0, 0.5);
-  height: 45vh;
-  position: relative;
+	width: 100%;
+	background-color: rbga(0, 0, 0, 0.5);
+	height: 45vh;
+	position: relative;
+	padding-top: 100px;
 }
 .hero-img::before {
-  content: "";
-  background-image: url("../assets/pexels-nadezhda-moryak-6063606.jpg");
-  background-size: cover;
-  background-position: center top;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.6;
+	background-color: white;
+	background-size: cover;
+	background-position: center top;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.6;
 }
 .heading {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .hero-img h1 {
-  font-size: 2.4rem;
+	font-size: 2.4rem;
+	color: #397a4c;
 }
 
 .hero-img p {
-  font-size: 1.4rem;
-  text-align: center;
+	font-size: 1.4rem;
+	text-align: center;
+	color: #397a4c;
 }
 
 @media screen and (max-width: 640px) {
-  .hero-img h1 {
-    font-size: 2rem;
-  }
+	.hero-img h1 {
+		font-size: 2rem;
+	}
 }

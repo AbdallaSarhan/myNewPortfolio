@@ -1,56 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;800&display=swap");
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Outfit", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	/* font-family: "Outfit", sans-serif; */
+	/* font-family: "Poppins", sans-serif; */
+	/* font-family: "Inter", sans-serif; */
+	/* font-family: "Roboto", sans-serif; */
+	/* font-family: "Lato", sans-serif; */
+	/* font-family: "Montserrat", sans-serif; */
+	font-family: "Merriweather", serif;
+	/* font-family: "Nunito", sans-serif; */
+	/* font-family: "Fira Sans", sans-serif; */
+	/* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+	/* font-family: "Playfair Display", serif; */
 }
 
 body {
-  /* background-color: #66fcf1; */
-  /* background-color: #2eb08c; */
-  background-color: #5ea18b;
+	/* background-color: #66fcf1; */
+	/* background-color: #2eb08c; */
+	/* background-color: #5ea18b; */
+	background-color: white;
 }
 
 h1,
 h4,
 p,
 a {
-  color: white;
-  text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 ul {
-  list-style-type: none;
+	list-style-type: none;
 }
 .btn {
-  padding: 12px 32px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background: #bd6666;
-  color: white;
-  border: 1px solid #fff;
-  font-weight: 600;
-  cursor: pointer;
+	padding: 12px 32px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	background: #3e6c60;
+	color: white;
+	border: 1px solid #fff;
+	font-weight: 600;
+	cursor: pointer;
 }
 .btn-light {
-  padding: 12px 32px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background: transparent;
-  color: white;
-  border: 1px solid #fff;
-  font-weight: 600;
-  cursor: pointer;
+	padding: 12px 32px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	background: transparent;
+	color: white;
+	border: 1px solid #fff;
+	font-weight: 600;
+	cursor: pointer;
 }
 
 .btn:hover {
-  background: #e5a0a0;
-  color: white;
-  transition: 0.3s;
+	background: #397a4c;
+	color: white;
+	transition: 0.3s;
 }
 .btn-light:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  transition: 0.3s;
+	background: rgba(255, 255, 255, 0.2);
+	color: white;
+	transition: 0.3s;
 }

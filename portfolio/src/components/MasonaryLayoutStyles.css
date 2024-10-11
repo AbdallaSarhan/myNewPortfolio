@@ -1,23 +1,23 @@
 .my-masonry-grid {
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
-  display: flex;
-  margin-left: -30px; /* gutter size offset */
-  width: auto;
+	display: -webkit-box; /* Not needed if autoprefixing */
+	display: -ms-flexbox; /* Not needed if autoprefixing */
+	display: flex;
+	margin-left: -30px; /* gutter size offset */
+	width: auto;
 }
 .my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
-  background-clip: padding-box;
+	padding-left: 30px; /* gutter size */
+	background-clip: padding-box;
 }
 
 /* Style your items */
 .my-masonry-grid_column > div {
-  /* change div to reference your elements you put in <Masonry> */
-  background: rgb(10, 10, 10, 0.9);
-  margin-bottom: 30px;
-  border: 1px dotted #bd6666;
-  border-radius: 40px;
-  padding: 60;
-  box-shadow: 10px 10px 30px #bd6666;
-  font-family: "sans-serif";
+	/* change div to reference your elements you put in <Masonry> */
+	background: rgb(10, 10, 10, 0.9);
+	margin-bottom: 30px;
+	border: 1px dotted #3e6c60;
+	border-radius: 40px;
+	padding: 60;
+	box-shadow: 10px 10px 30px #3e6c60;
+	font-family: "sans-serif";
 }

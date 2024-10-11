@@ -1,21 +1,32 @@
 .title {
-  color: #bd6666;
-  /* color: #bd6666; */
-  font-size: 100;
-  font-family: monospace;
-  max-width: 550px;
-  /* padding-bottom: 20;
+	color: #508e63;
+	/* color: #bd6666; */
+	font-size: 100;
+	font-family: monospace;
+	max-width: 550px;
+	/* padding-bottom: 20;
     margin-right: 100;
     padding-left: 80; */
 }
 .skill-container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  padding: 5rem;
-  padding-bottom: 10rem;
-  padding-top: 8rem;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	padding: 5rem;
+	padding-bottom: 10rem;
+	padding-top: 8rem;
+}
+
+.sub-sub-container {
+	flex-direction: column;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	align-content: center;
+	background-color: #508e63;
+	border-radius: 60px;
+	padding: 2rem;
 }
