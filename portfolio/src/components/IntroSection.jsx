@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import me from "../assets/ME.jpeg";
 import headshot from "../assets/Headshot.jpg";
 import resume from "../assets/Resume.pdf";
 import { animated as a, useSpring } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import "./IntroSectionStyles.css";
+import { ReactTyped } from "react-typed";
 const ElevatorPitch = () => {
 	const [show, setShowing] = useState(false);
 
@@ -35,7 +35,16 @@ const ElevatorPitch = () => {
 					Abdalla Sarhan
 				</a.h1>
 				<a.h4 className="sub-header" style={subHeaderProps}>
-					Software Engineer - Full Stack Developer - Mobile Developer
+					<ReactTyped
+						strings={[
+							"Software Engineer",
+							"Full Stack Developer",
+							"Mobile Developer",
+						]}
+						typeSpeed={50}
+						backSpeed={50}
+						loop
+					/>
 				</a.h4>
 			</div>
 
