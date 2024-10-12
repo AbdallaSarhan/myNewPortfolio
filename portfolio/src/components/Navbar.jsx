@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./NavbarStyles.css";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -6,23 +6,43 @@ import logo from "../assets/Ball6.png";
 
 const Navbar = () => {
 	const [click, setClick] = useState(false);
-	const [color, setColor] = useState(false);
 
-	const changeColor = () => {
-		if (window.scrollY >= 100) {
-			setColor(true);
+	const [isVisible, setIsVisible] = useState(true);
+	const [lastScrollY, setLastScrollY] = useState(0);
+
+	// const changeColor = () => {
+	// 	if (window.scrollY >= 100) {
+	// 		setColor(true);
+	// 	} else {
+	// 		setColor(false);
+	// 	}
+	// };
+	// window.addEventListener("scroll", changeColor);
+
+	const handleScroll = () => {
+		if (window.scrollY > lastScrollY) {
+			// If scrolling down, hide the navbar
+			setIsVisible(false);
 		} else {
-			setColor(false);
+			// If scrolling up, show the navbar
+			setIsVisible(true);
 		}
+		setLastScrollY(window.scrollY);
 	};
-	window.addEventListener("scroll", changeColor);
 
 	const handleClick = () => {
 		setClick(!click);
 	};
 
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [lastScrollY]);
 	return (
-		<div className={color ? "header header-bg" : "header"}>
+		<div className={`header ${isVisible ? "show" : "hide"}`}>
 			<Link to="/">
 				{/* <img src={logo} alt="img" className="logo" /> */}
 				<h2 className="name-logo">Abdalla Sarhan</h2>
