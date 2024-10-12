@@ -45,9 +45,11 @@ const Footer = () => {
 				<div className="right">
 					<h4>About Me</h4>
 					<p>
-						I am a Computer Engineering student at York University - Lassonde
-						School of Engineering. I am continuously learning full stack, web,
-						and mobile development.
+						My passion is in building innovative solutions to real-world
+						problems through software. With hands on experience in full stack
+						development and cloud platforms like AWS and GCP, I leverage
+						containerization technologies such as Docker and Kubernetes to
+						create scalable, efficient systems.
 					</p>
 					<div className="social">
 						<a
