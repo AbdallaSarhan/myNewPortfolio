@@ -7,6 +7,7 @@ import Projects from "./routes/Projects";
 import { Routes, Route } from "react-router-dom";
 import { ProjectDetails } from "./routes/ProjectDetails";
 import Modal from "./components/Modal";
+import ChatAgent from "./components/ChatAgent";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -35,6 +36,7 @@ function App() {
         {/* <Route path="/contact" element={<Contact />} /> */}
         <Route path="/project/:title" element={<ProjectDetails />} />
       </Routes>
+      <ChatAgent />
     </>
   );
 }
