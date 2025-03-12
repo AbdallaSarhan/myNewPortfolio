@@ -2,6 +2,7 @@ import "./AboutContentStyles.css";
 import React, { useEffect } from "react";
 // import { Link } from "react-router-dom";
 import aboutPicture from "../assets/AboutPicture.jpg";
+import { FaGlobe, FaLightbulb, FaUsers, FaCode, FaBrain } from "react-icons/fa";
 
 const AboutContent = () => {
 	useEffect(() => {
@@ -10,48 +11,51 @@ const AboutContent = () => {
 
 	return (
 		<div className="about">
-			{/* <h1
-				style={{
-					color: "#397a4c",
-					fontSize: 50,
-					maxWidth: "550px",
-					paddingBottom: 20,
-				}}
-			>
-				Who I Am
-			</h1> */}
-			<div className="sub-container">
-				<h4
-					style={{
-						maxWidth: "500px",
-						marginLeft: 20,
-						fontFamily: "fantasy",
-						color: "#3e6c60",
-					}}
-				>
-					Originally from Egypt, I have spent the majority of my life in Canada,
-					moving between various regions. This experience exposed me to a wide
-					range of cultures, values, and perspectives, all of which have shaped
-					me into an open-minded individual. My diverse background has not only
-					enhanced my ability to connect with others but also fostered a deep
-					appreciation for different ways of living and thinking. These
-					experiences have helped me become an effective communicator with a
-					strong understanding of people from all walks of life.
-				</h4>
-			</div>
+			<div className="about-content">
+				<div className="about-text">
+					<h1>About Me</h1>
+					<div className="bio-section">
+						<p className="bio-intro">
+							Originally from Egypt and raised in Canada, my journey across different regions has shaped me into a versatile and adaptable individual. Through these diverse experiences and environments, I've developed a deep appreciation for different perspectives and innovative approaches to problem-solving. This unique background, combined with my technical skills, enables me to bring fresh insights and creative solutions to every project I undertake.
+						</p>
+						
+						<div className="key-points">
+							<div className="key-point">
+								<FaGlobe className="key-icon" />
+								<h3>Global Perspective</h3>
+								<p>My multicultural background has given me a unique lens through which I view challenges and opportunities in software development.</p>
+							</div>
 
-			<div className="right">
-				<div className="img-container">
-					<div className="img-stack top">
-						<img src={aboutPicture} alt="img" className="img" />
+							<div className="key-point">
+								<FaLightbulb className="key-icon" />
+								<h3>Innovation Driven</h3>
+								<p>I combine technical expertise with creative problem-solving to build solutions that make a real impact.</p>
+							</div>
+
+							<div className="key-point">
+								<FaUsers className="key-icon" />
+								<h3>Collaborative Spirit</h3>
+								<p>My diverse background has enhanced my ability to communicate effectively and work seamlessly in cross-cultural teams.</p>
+							</div>
+
+							<div className="key-point">
+								<FaCode className="key-icon" />
+								<h3>Technical Excellence</h3>
+								<p>Passionate about clean code and modern technologies, I strive to create efficient and scalable solutions.</p>
+							</div>
+
+							<div className="key-point">
+								<FaBrain className="key-icon" />
+								<h3>AI Enthusiast</h3>
+								<p>Deeply fascinated by Machine Learning and AI, actively exploring their applications in solving complex real-world problems.</p>
+							</div>
+						</div>
 					</div>
-					<div className="img-stack bottom">
-						<img
-							src={aboutPicture}
-							alt="img"
-							className="img"
-							style={{ objectFit: "contained" }}
-						/>
+				</div>
+
+				<div className="about-image">
+					<div className="img-container">
+						<img src={aboutPicture} alt="Abdalla Sarhan" className="profile-img" />
 					</div>
 				</div>
 			</div>
