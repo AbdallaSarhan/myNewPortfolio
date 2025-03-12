@@ -6,10 +6,8 @@ import "./MasonaryLayoutStyles.css";
 
 const breakpointObj = {
   default: 3,
-  //   3000: 6,
-  //   1200: 3,
-  1000: 2,
-  500: 1,
+  1200: 2,
+  800: 1,
 };
 
 const MasonryLayout = ({ projects }) => {

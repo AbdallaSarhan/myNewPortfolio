@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import ElevatorPitch from "../components/ElevatorPitch";
 import IntroSection from "../components/IntroSection";
 import SkillsSection from "../components/SkillsSection";
+import Timeline from "../components/Timeline";
 
 const Home = () => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Navbar />
       <IntroSection />
       <ElevatorPitch />
+      <Timeline />
       <SkillsSection />
       <Footer />
     </div>

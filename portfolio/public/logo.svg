@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="100" fill="#3e6c60"/>
+  
+  <!-- Decorative circuit lines -->
+  <path d="M50 256 H150" stroke="#508e63" stroke-width="8" stroke-linecap="round"/>
+  <path d="M362 256 H462" stroke="#508e63" stroke-width="8" stroke-linecap="round"/>
+  <path d="M256 50 V150" stroke="#508e63" stroke-width="8" stroke-linecap="round"/>
+  <path d="M256 362 V462" stroke="#508e63" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Circuit dots -->
+  <circle cx="150" cy="256" r="12" fill="#508e63"/>
+  <circle cx="362" cy="256" r="12" fill="#508e63"/>
+  <circle cx="256" cy="150" r="12" fill="#508e63"/>
+  <circle cx="256" cy="362" r="12" fill="#508e63"/>
+  
+  <!-- AS Letters -->
+  <path d="M180 160 Q256 120 332 160 L300 320 Q256 350 212 320 L180 160" 
+        fill="none" stroke="white" stroke-width="24" stroke-linecap="round"/>
+  <path d="M212 220 Q256 190 300 220" 
+        fill="none" stroke="white" stroke-width="24" stroke-linecap="round"/>
+</svg> 

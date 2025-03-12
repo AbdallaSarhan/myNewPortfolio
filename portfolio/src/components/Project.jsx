@@ -4,9 +4,14 @@ import MasonryLayout from "./MasonaryLayout";
 
 const Project = () => {
   return (
-    <div className="work-container">
-      <div className="project-container">
-        <MasonryLayout />
+    <div className="projects">
+      <div className="projects-content">
+        <div className="projects-text">
+          <h1>My Projects</h1>
+          <div className="projects-grid">
+            <MasonryLayout />
+          </div>
+        </div>
       </div>
     </div>
   );

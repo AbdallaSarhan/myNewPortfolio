@@ -1,94 +1,87 @@
 import React, { useEffect, useState } from "react";
 import { useTrail, animated as a, useSpring } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
+import { 
+	FaReact, 
+	FaMobile, 
+	FaJs, 
+	FaNodeJs, 
+	FaGitAlt, 
+	FaDatabase, 
+	FaJava, 
+	FaPython, 
+	FaLeaf, 
+	FaCode, 
+	FaHtml5,
+	FaMicrochip
+} from "react-icons/fa";
+import { SiTypescript, SiFirebase } from "react-icons/si";
 import "./SkillsSectionStyles.css";
 
 const skills = [
-	"React.JS",
-	"React Native",
-	"JavaScript",
-	"TypeScript",
-	"Node",
-	"Git",
-	"Firebase",
-	"MongoDB",
-	"Java",
-	"Python",
-	"Spring Boot",
-	"C",
-	"HTML and CSS",
-	"Verilog HDL",
+	{ name: "React.JS", icon: <FaReact /> },
+	{ name: "React Native", icon: <FaMobile /> },
+	{ name: "JavaScript", icon: <FaJs /> },
+	{ name: "TypeScript", icon: <SiTypescript /> },
+	{ name: "Node", icon: <FaNodeJs /> },
+	{ name: "Git", icon: <FaGitAlt /> },
+	{ name: "Firebase", icon: <SiFirebase /> },
+	{ name: "MongoDB", icon: <FaDatabase /> },
+	{ name: "Java", icon: <FaJava /> },
+	{ name: "Python", icon: <FaPython /> },
+	{ name: "Spring Boot", icon: <FaLeaf /> },
+	{ name: "C", icon: <FaCode /> },
+	{ name: "HTML and CSS", icon: <FaHtml5 /> },
+	{ name: "Verilog HDL", icon: <FaMicrochip /> },
 ];
-const config = { mass: 5, tension: 2000, friction: 200 };
-const ElevatorPitch = () => {
+
+const SkillsSection = () => {
 	const [show, setShowing] = useState(false);
-
-	const { ref, inView } = useInView({});
-
-	const trail = useTrail(skills.length, {
-		config,
-		opacity: show ? 1 : 0,
-		x: show ? 0 : 20,
-		height: show ? 80 : 0,
-		from: { opacity: 0, x: 20, height: 0 },
+	const { ref, inView } = useInView({
+		threshold: 0.2,
+		triggerOnce: true
 	});
 
 	const titleProps = useSpring({
-		opacity: show ? 1 : 0.5,
-		marginLeft: show ? 50 : -710,
-		fontSize: show ? 65 : 25,
-	});
-	const listProps = useSpring({
 		opacity: show ? 1 : 0,
+		transform: show ? "translateY(0)" : "translateY(20px)",
+		config: { mass: 1, tension: 180, friction: 12 }
+	});
 
-		padding: "1.5rem",
-		border: "2px dotted #508e63",
-		borderRadius: "60px",
-		boxShadow: "10px 10px 30px #508e63",
-		fontFamily: "sans-serif",
-		backgroundColor: "#3e6c60",
+	const trail = useTrail(skills.length, {
+		opacity: show ? 1 : 0,
+		transform: show ? "translateY(0)" : "translateY(20px)",
+		config: { mass: 1, tension: 180, friction: 12 },
+		delay: 200
 	});
 
 	useEffect(() => {
 		setShowing(inView);
 	}, [inView]);
+
 	return (
-		<div className="skill-container">
-			<a.h1 style={titleProps} className="title">
-				Skills
-			</a.h1>
-			<div className="skill-sub-container">
-				<a.ul className="sub-sub-container" style={listProps}>
-					{trail.map(({ x, height, ...rest }, index) => (
+		<div className="skills-section">
+			<div className="skills-content" ref={ref}>
+				<a.h2 className="skills-title" style={titleProps}>
+					Skills & Technologies
+				</a.h2>
+				<div className="skills-grid">
+					{trail.map((style, index) => (
 						<a.div
-							ref={ref}
-							key={skills[index]}
-							// className="trails-text"
-							style={{
-								...rest,
-								transform: x.interpolate((x) => `translate3d(0,${x}px,0)`),
-							}}
+							key={skills[index].name}
+							className="skill-item"
+							style={style}
 						>
-							<a.li
-								style={{
-									color: "white",
-									fontSize: 22,
-									fontWeight: 500,
-									maxWidth: "550px",
-									marginLeft: 50,
-									paddingRight: 90,
-									paddingTop: 3,
-									fontFamily: "sans-serif",
-								}}
-							>
-								{skills[index]}
-							</a.li>
+							<div className="skill-icon">
+								{skills[index].icon}
+							</div>
+							<p className="skill-name">{skills[index].name}</p>
 						</a.div>
 					))}
-				</a.ul>
+				</div>
 			</div>
 		</div>
 	);
 };
 
-export default ElevatorPitch;
+export default SkillsSection;
