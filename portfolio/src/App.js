@@ -6,8 +6,8 @@ import About from "./routes/About";
 import Projects from "./routes/Projects";
 import { Routes, Route } from "react-router-dom";
 import { ProjectDetails } from "./routes/ProjectDetails";
-import Modal from "./components/Modal";
-import ChatAgent from "./components/ChatAgent";
+import Modal from "./components/common/Modal";
+// import ChatAgent from "./components/ChatAgent";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -28,15 +28,14 @@ function App() {
 
   return (
     <>
-      {showModal && <Modal onClose={closeModal} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         {/* <Route path="/contact" element={<Contact />} /> */}
-        <Route path="/project/:title" element={<ProjectDetails />} />
+        {/* <Route path="/project/:title" element={<ProjectDetails />} /> */}
       </Routes>
-      <ChatAgent />
+      {/* <ChatAgent /> */}
     </>
   );
 }
